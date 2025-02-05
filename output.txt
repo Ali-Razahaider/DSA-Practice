@@ -1,5 +1,1 @@
-2 5 14 23 31 
-
-
-
-
+The string is a palindrome.

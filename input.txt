@@ -1,2 +1,1 @@
-5
-2 31 23 14 5
+"A man, a plan, a canal: Panama"
