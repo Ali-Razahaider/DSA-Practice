@@ -11,6 +11,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  `maxconsec1.cpp`: Finds the maximum number of consecutive 1's in a binary array.
 -  `singleNum.cpp`: Finds the single number in an array where every element appears twice except for one.
 -  `TwoArraysUnion.cpp`: Finds the union of two sorted arrays and returns the result in sorted order.
+-  `LongestSubarrayWithSumK.cpp`: Finds the length of the longest subarray where the sum of its elements is equal to a given value k.
 
 ## Overview of Each File
 
@@ -41,6 +42,10 @@ Finds the single number in an array where every element appears twice except for
 ### TwoArraysUnion.cpp
 
 Finds the union of two sorted arrays and returns the result in sorted order. The union is defined as the set containing distinct common elements that are present in either of the arrays.
+
+### LongestSubarrayWithSumK.cpp
+
+Finds the length of the longest subarray where the sum of its elements is equal to a given value k. The solution uses a map to store prefix sums and achieves a linear runtime complexity.
 
 ## How to Run
 
