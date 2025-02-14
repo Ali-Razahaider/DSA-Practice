@@ -4,17 +4,18 @@ This repository contains solutions to various algorithm problems implemented in 
 
 ## Files
 
-- [`removduplicates.cpp`](./removduplicates.cpp): Removes duplicates from a sorted array and returns the number of unique elements.
-- [`leftshift.cpp`](./leftshift.cpp): Rotates an array to the right by a given number of steps.
-- [`movezeros.cpp`](./movezeros.cpp): Moves all zeros in an array to the end while maintaining the relative order of non-zero elements.
-- [`missingNum.cpp`](./missingNum.cpp): Finds the missing number in an array containing distinct numbers in the range [0, n].
-- [`maxconsec1.cpp`](./maxconsec1.cpp): Finds the maximum number of consecutive 1's in a binary array.
-- [`singleNum.cpp`](./singleNum.cpp): Finds the single number in an array where every element appears twice except for one.
-- [`TwoArraysUnion.cpp`](./TwoArraysUnion.cpp): Finds the union of two sorted arrays and returns the result in sorted order.
-- [`LongestSubarrayWithSumK.cpp`](./LongestSubarrayWithSumK.cpp): Finds the length of the longest subarray where the sum of its elements is equal to a given value k.
-- [`2Sum.cpp`](./2Sum.cpp): Finds the indices of the two numbers in an array that add up to a given target.
-- [`sortColor.cpp`](./sortColor.cpp): Sorts an array of colors represented by integers 0, 1, and 2 in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
-- [`largestfreq.cpp`](./largestfreq.cpp): Contains the implementation of the `majorityElement` function and the driver code to test it.
+-  [`removduplicates.cpp`](./removduplicates.cpp): Removes duplicates from a sorted array and returns the number of unique elements.
+-  [`leftshift.cpp`](./leftshift.cpp): Rotates an array to the right by a given number of steps.
+-  [`movezeros.cpp`](./movezeros.cpp): Moves all zeros in an array to the end while maintaining the relative order of non-zero elements.
+-  [`missingNum.cpp`](./missingNum.cpp): Finds the missing number in an array containing distinct numbers in the range [0, n].
+-  [`maxconsec1.cpp`](./maxconsec1.cpp): Finds the maximum number of consecutive 1's in a binary array.
+-  [`singleNum.cpp`](./singleNum.cpp): Finds the single number in an array where every element appears twice except for one.
+-  [`TwoArraysUnion.cpp`](./TwoArraysUnion.cpp): Finds the union of two sorted arrays and returns the result in sorted order.
+-  [`LongestSubarrayWithSumK.cpp`](./LongestSubarrayWithSumK.cpp): Finds the length of the longest subarray where the sum of its elements is equal to a given value k.
+-  [`2Sum.cpp`](./2Sum.cpp): Finds the indices of the two numbers in an array that add up to a given target.
+-  [`sortColor.cpp`](./sortColor.cpp): Sorts an array of colors represented by integers 0, 1, and 2 in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+-  [`largestfreq.cpp`](./largestfreq.cpp): Contains the implementation of the `majorityElement` function and the driver code to test it.
+-  [`MaxSubarr.cpp`](./MaxSubarr.cpp): Contains the implementation of the solution and driver code.
 
 ## Overview of Each File
 
@@ -66,6 +67,7 @@ Sorts an array of colors represented by integers 0, 1, and 2 in-place so that ob
 #### Example
 
 To compile and run `sortColor.cpp`:
+
 ```sh
 g++ -o sortColor sortColor.cpp
 ./sortColor
@@ -75,37 +77,50 @@ g++ -o sortColor sortColor.cpp
 
 Contains the implementation of the `majorityElement` function and the driver code to test it. The majority element is the element that appears more than ⌊n / 2⌋ times.
 
+### [MaxSubarr.cpp](./MaxSubarr.cpp)
+
+Contains the implementation of the solution and driver code.
+
 ## How to Run
 
 1. Ensure you have a C++ compiler installed on your system.
 2. Navigate to the directory containing the desired file.
 3. Compile the file using the following command:
-    ```sh
-    g++ -o output filename.cpp
-    ```
+   ```sh
+   g++ -o output filename.cpp
+   ```
 4. Run the compiled program:
-    ```sh
-    ./output
-    ```
+   ```sh
+   ./output
+   ```
 
 ## Example
 
 To compile and run `removduplicates.cpp`:
+
 ```sh
 g++ -o removduplicates removduplicates.cpp
 ./removduplicates
 ```
 
 To compile and run `largestfreq.cpp`:
+
 ```sh
 g++ -o largestfreq largestfreq.cpp
 ./largestfreq
 ```
 
+To compile and run `MaxSubarr.cpp`:
+
+```sh
+g++ -o MaxSubarr MaxSubarr.cpp
+./MaxSubarr
+```
+
 ## Input and Output Files
 
-- `input.txt`: Contains input data for the programs.
-- `output.txt`: Contains output data from the programs.
+-  `input.txt`: Contains input data for the programs.
+-  `output.txt`: Contains output data from the programs.
 
 ## License
 
