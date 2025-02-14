@@ -1,1 +1,2 @@
-The string is a palindrome.
+After Counting Sort Method: 0 0 1 1 2 2 
+After Dutch National Flag Method: 0 0 1 1 2 2 

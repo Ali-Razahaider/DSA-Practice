@@ -14,6 +14,7 @@ using namespace std;
 
 class Solution {
     public:
+        // Method 1: Two-pass solution using counting sort
         void sortColors(vector<int>& nums) {
             int count1 = 0;
             int count2 = 0;
@@ -38,16 +39,61 @@ class Solution {
             for (int i = count1 + count2; i < nums.size(); i++) {
                 nums[i] = 2;
             }
+        }        
+
+        // Method 2: Optimal approach using Dutch National Flag algorithm
+        void sortColorsOptimal(vector<int>& nums) {
+            int s = 0;
+            int n = nums.size();
+            int j = n - 1;
+            int mid = 0;
+    
+            while (mid <= j) {
+                if (nums[mid] == 0) {
+                    swap(nums[mid], nums[s]);
+                    mid++;
+                    s++;
+                } else if (nums[mid] == 1) {
+                    mid++;
+                } else if (nums[mid] == 2) {
+                    swap(nums[mid], nums[j]);
+                    j--;
+                }
+            }
         }
 };
 
 int main() {
     Solution solution;
-    vector<int> nums = {2, 0, 2, 1, 1, 0};
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+   
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
+
+    // Test Method 1: Two-pass solution using counting sort
     solution.sortColors(nums);
+    cout << "After Counting Sort Method: ";
     for (int num : nums) {
         cout << num << " ";
     }
     cout << endl;
+
+    // Reset the array for the next test
+    
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
+
+    // Test Method 2: Optimal approach using Dutch National Flag algorithm
+    solution.sortColorsOptimal(nums);
+    cout << "After Dutch National Flag Method: ";
+    for (int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
+
     return 0;
 }
