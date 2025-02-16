@@ -16,6 +16,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  [`sortColor.cpp`](./sortColor.cpp): Sorts an array of colors represented by integers 0, 1, and 2 in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
 -  [`largestfreq.cpp`](./largestfreq.cpp): Contains the implementation of the `majorityElement` function and the driver code to test it.
 -  [`MaxSubarr.cpp`](./MaxSubarr.cpp): Contains the implementation of the solution and driver code.
+-  [`MaxsumforMinsubarr.cpp`](./MaxsumforMinsubarr.cpp): Contains the implementation of the solution and driver code.
 
 ## Overview of Each File
 
@@ -81,6 +82,10 @@ Contains the implementation of the `majorityElement` function and the driver cod
 
 Contains the implementation of the solution and driver code.
 
+### [MaxsumforMinsubarr.cpp](./MaxsumforMinsubarr.cpp)
+
+Contains the implementation of the solution and driver code.
+
 ## How to Run
 
 1. Ensure you have a C++ compiler installed on your system.
@@ -117,10 +122,21 @@ g++ -o MaxSubarr MaxSubarr.cpp
 ./MaxSubarr
 ```
 
+To compile and run `MaxsumforMinsubarr.cpp`:
+
+```sh
+g++ -o MaxsumforMinsubarr MaxsumforMinsubarr.cpp
+./MaxsumforMinsubarr
+```
+
 ## Input and Output Files
 
 -  `input.txt`: Contains input data for the programs.
 -  `output.txt`: Contains output data from the programs.
+
+## Screenshot
+
+![Output Screenshot](./screenshot.png)
 
 ## License
 
