@@ -17,6 +17,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  [`largestfreq.cpp`](./largestfreq.cpp): Contains the implementation of the `majorityElement` function and the driver code to test it.
 -  [`MaxSubarr.cpp`](./MaxSubarr.cpp): Contains the implementation of the solution and driver code.
 -  [`MaxsumforMinsubarr.cpp`](./MaxsumforMinsubarr.cpp): Contains the implementation of the solution and driver code.
+-  [`bestTimetosell.cpp`](./bestTimetosell.cpp): Contains implementation to find maximum profit that can be achieved by buying and selling stocks.
 
 ## Overview of Each File
 
@@ -85,6 +86,25 @@ Contains the implementation of the solution and driver code.
 ### [MaxsumforMinsubarr.cpp](./MaxsumforMinsubarr.cpp)
 
 Contains the implementation of the solution and driver code.
+
+### [bestTimetosell.cpp](./bestTimetosell.cpp)
+
+Contains solution to find the maximum profit that can be achieved by buying a stock on one day and selling it on a different day in the future. The solution maintains track of minimum buying price and maximum selling price to calculate maximum profit.
+
+#### Approach
+
+1. Find the minimum stock price and its index (buying day)
+2. From buying day onwards, find maximum stock price (selling day)
+3. Return the difference if profit is positive, otherwise return 0
+
+#### Example
+
+To compile and run `bestTimetosell.cpp`:
+
+```sh
+g++ -o bestTimetosell bestTimetosell.cpp
+./bestTimetosell
+```
 
 ## How to Run
 
