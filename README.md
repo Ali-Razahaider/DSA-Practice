@@ -89,22 +89,32 @@ Contains the implementation of the solution and driver code.
 
 ### [bestTimetosell.cpp](./bestTimetosell.cpp)
 
-Contains solution to find the maximum profit that can be achieved by buying a stock on one day and selling it on a different day in the future. The solution maintains track of minimum buying price and maximum selling price to calculate maximum profit.
+Implements a solution to find the maximum profit that can be achieved by buying and selling a stock. The problem requires finding the best single day to buy and best future day to sell.
 
 #### Approach
 
-1. Find the minimum stock price and its index (buying day)
-2. From buying day onwards, find maximum stock price (selling day)
-3. Return the difference if profit is positive, otherwise return 0
+1. Use a single pass through the array
+2. Keep track of minimum price seen so far
+3. For each price, calculate potential profit if we sell at current price
+4. Update maximum profit if current potential profit is greater
 
-#### Example
+Time Complexity: O(n) where n is the number of days
+Space Complexity: O(1)
 
-To compile and run `bestTimetosell.cpp`:
+Example Input:
 
-```sh
-g++ -o bestTimetosell bestTimetosell.cpp
-./bestTimetosell
 ```
+6
+7 1 5 3 6 4
+```
+
+Expected Output:
+
+```
+Best Time to Buy and Sell Stock Profit: 5
+```
+
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5
 
 ## How to Run
 

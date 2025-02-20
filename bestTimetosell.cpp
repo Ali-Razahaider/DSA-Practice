@@ -4,48 +4,42 @@
 #include <climits>
 using namespace std;
 
-/*
-You are given an array prices where prices[i] is the price of a given stock on the ith day.
-You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
-Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
-*/
-
 class Solution {
-    public:
-        int maxProfit(vector<int>& prices) {
-            int minS = INT_MAX;
-            int maxS = INT_MIN;
-            int buyind = 0;
-            int sellind = 0;
-            for (int i = 0; i < prices.size(); i++) {
-                if (prices[i] < minS ) {
-                    minS = prices[i];
-                    buyind = i;
-                }
-            }
-    
-            for (int j = buyind; j < prices.size(); j++) {
-                if (prices[j] > maxS) {
-                    maxS = prices[j];
-                    sellind = j;
-                }
-            }
-    
-            return (maxS - minS) > 0 ? (maxS - minS) : 0;
+public:
+    int maxProfit(vector<int>& prices) {
+        int minPrice = INT_MAX;
+        int maxProfit = 0;
+        
+        for(int i = 0; i < prices.size(); i++) {
+            minPrice = min(minPrice, prices[i]);
+            maxProfit = max(maxProfit, prices[i] - minPrice);
         }
+        return maxProfit;
+    }
 };
 
 int main() {
     ifstream inputFile("input.txt");
     ofstream outputFile("output.txt", ios::app);
+    
+    if (!inputFile.is_open()) {
+        cout << "Error opening input file" << endl;
+        return 1;
+    }
+    
     int n;
     inputFile >> n;
     vector<int> prices(n);
+    
     for(int i = 0; i < n; i++) {
         inputFile >> prices[i];
     }
+    
     Solution sol;
     int result = sol.maxProfit(prices);
-    outputFile << "Maximum Profit: " << result << endl;
+    outputFile << "Best Time to Buy and Sell Stock Profit: " << result << endl;
+    
+    inputFile.close();
+    outputFile.close();
     return 0;
 }
