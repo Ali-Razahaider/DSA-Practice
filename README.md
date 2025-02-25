@@ -18,6 +18,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  [`MaxSubarr.cpp`](./MaxSubarr.cpp): Contains the implementation of the solution and driver code.
 -  [`MaxsumforMinsubarr.cpp`](./MaxsumforMinsubarr.cpp): Contains the implementation of the solution and driver code.
 -  [`bestTimetosell.cpp`](./bestTimetosell.cpp): Contains implementation to find maximum profit that can be achieved by buying and selling stocks.
+-  [`RearrangeArrwithSign.cpp`](./RearrangeArrwithSign.cpp): Contains implementation to rearrange an array with alternating positive and negative integers while preserving order.
 
 ## Overview of Each File
 
@@ -172,6 +173,43 @@ Best Time to Buy and Sell Stock Profit: 5
 ```
 
 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+
+### [RearrangeArrwithSign.cpp](./RearrangeArrwithSign.cpp)
+
+Rearranges an array such that positive and negative integers alternate, starting with a positive integer while preserving the relative order of elements with the same sign.
+
+#### Approach 1: Optimal Solution (Space Optimized)
+
+1. Create a result array of the same size as the input array.
+2. Maintain two pointers, one for positive integers (starting at index 0) and one for negative integers (starting at index 1).
+3. Iterate through the original array. Place positive integers at even positions and negative integers at odd positions in the result array.
+4. Increment the respective pointer by 2 after each placement.
+5. Return the result array.
+
+Time Complexity: O(n) where n is the size of the input array.
+Space Complexity: O(n) for the result array.
+
+#### Approach 2: Brute Force Solution
+
+1. Create two separate arrays to store positive and negative integers.
+2. Iterate through the original array, placing positive integers in the positive array and negative integers in the negative array.
+3. Create a result array and place elements from the positive and negative arrays alternatively.
+4. Return the result array.
+
+Time Complexity: O(n) where n is the size of the input array.
+Space Complexity: O(n) for the positive array, negative array, and result array.
+
+Example Input:
+
+```
+3 1 -2 -5 2 -4
+```
+
+Expected Output:
+
+```
+3 -2 1 -5 2 -4
+```
 
 ## How to Run
 
