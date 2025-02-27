@@ -1,13 +1,52 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <unordered_set>
 #include <algorithm>
 #include <fstream>
 
 class Solution {
 public:
     /**
-     * Finds the length of the longest consecutive elements sequence.
+     * Optimized approach using unordered_set with O(n) time complexity.
+     * Only starts counting sequences from their starting points.
+     * 
+     * @param nums Vector of integers
+     * @return Length of longest consecutive sequence
+     */
+    int longestConsecutive(std::vector<int>& nums) {
+        int n = nums.size();
+        if (n == 0)
+            return 0;
+        int lar = 1;
+        std::unordered_set<int> st;
+        
+        // Insert all elements into the set
+        for (int i = 0; i < nums.size(); i++) {
+            st.insert(nums[i]);
+        }
+
+        // Only check sequences from their starting points
+        for (auto i : st) {
+            // If this is a starting point of a sequence (no left neighbor)
+            if (st.find(i - 1) == st.end()) {
+                int cnt = 1;
+                int x = i;
+
+                // Count consecutive elements
+                while (st.find(x + 1) != st.end()) {
+                    x++;
+                    cnt++;
+                }
+                lar = std::max(cnt, lar);
+            }
+        }
+        return lar;
+    }
+
+    /**
+     * Naive approach using sorted map with O(n log n) time complexity.
+     * Uses a map to sort elements and then counts consecutive sequences.
      * 
      * @param nums Vector of integers
      * @return Length of longest consecutive sequence
@@ -47,7 +86,7 @@ public:
 
 int main() {
     std::ifstream inFile("/D:/Main/input.txt");
-    std::ofstream outFile("/D:/Main/output.txt");
+    std::ofstream outFile("/D:/Main/output.txt", std::ios_base::app); // Append to existing output file
     
     int n;
     inFile >> n;
@@ -64,11 +103,13 @@ int main() {
     }
     outFile << std::endl;
     
-    // Find and output longest consecutive sequence length
+    // Find and output longest consecutive sequence length using both methods
     Solution solution;
-    int result = solution.naivelongestConsecutive(nums);
+    int naiveResult = solution.naivelongestConsecutive(nums);
+    int optimizedResult = solution.longestConsecutive(nums);
     
-    outFile << "Longest consecutive sequence length: " << result << std::endl;
+    outFile << "Longest consecutive sequence length (naive): " << naiveResult << std::endl;
+    outFile << "Longest consecutive sequence length (optimized): " << optimizedResult << std::endl;
     
     inFile.close();
     outFile.close();
