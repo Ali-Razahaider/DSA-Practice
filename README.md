@@ -19,6 +19,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  [`MaxsumforMinsubarr.cpp`](./MaxsumforMinsubarr.cpp): Contains the implementation of the solution and driver code.
 -  [`bestTimetosell.cpp`](./bestTimetosell.cpp): Contains implementation to find maximum profit that can be achieved by buying and selling stocks.
 -  [`RearrangeArrwithSign.cpp`](./RearrangeArrwithSign.cpp): Contains implementation to rearrange an array with alternating positive and negative integers while preserving order.
+-  [`setMatrixZeroes.cpp`](./setMatrixZeroes.cpp): Sets entire row and column to zero if an element in the matrix is zero.
 
 ## Overview of Each File
 
@@ -210,6 +211,16 @@ Expected Output:
 ```
 3 -2 1 -5 2 -4
 ```
+
+### [setMatrixZeroes.cpp](./setMatrixZeroes.cpp)
+
+Sets entire row and column to zero if an element in the matrix is zero. The solution uses additional space to keep track of rows and columns that need to be zeroed.
+
+#### Approach
+
+1. Use two arrays to keep track of rows and columns that need to be zeroed.
+2. Iterate through the matrix to find zero elements and mark corresponding rows and columns.
+3. Iterate through the matrix again and set elements to zero based on the marked rows and columns.
 
 ## How to Run
 
