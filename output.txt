@@ -1,2 +1,4 @@
-After Counting Sort Method: 0 0 1 1 2 2 
-After Dutch National Flag Method: 0 0 1 1 2 2 
+Rotated Image
+7 4 1 
+8 5 2 
+9 6 3 

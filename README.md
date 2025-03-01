@@ -20,6 +20,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  [`bestTimetosell.cpp`](./bestTimetosell.cpp): Contains implementation to find maximum profit that can be achieved by buying and selling stocks.
 -  [`RearrangeArrwithSign.cpp`](./RearrangeArrwithSign.cpp): Contains implementation to rearrange an array with alternating positive and negative integers while preserving order.
 -  [`setMatrixZeroes.cpp`](./setMatrixZeroes.cpp): Sets entire row and column to zero if an element in the matrix is zero.
+-  [`rotate2dArr.cpp`](./rotate2dArr.cpp): Contains the solution and driver code to read input, rotate the matrix, and write the output.
 
 ## Overview of Each File
 
@@ -222,6 +223,10 @@ Sets entire row and column to zero if an element in the matrix is zero. The solu
 2. Iterate through the matrix to find zero elements and mark corresponding rows and columns.
 3. Iterate through the matrix again and set elements to zero based on the marked rows and columns.
 
+### [rotate2dArr.cpp](./rotate2dArr.cpp)
+
+Contains the solution and driver code to read input, rotate the matrix, and write the output.
+
 ## How to Run
 
 1. Ensure you have a C++ compiler installed on your system.
@@ -263,6 +268,13 @@ To compile and run `MaxsumforMinsubarr.cpp`:
 ```sh
 g++ -o MaxsumforMinsubarr MaxsumforMinsubarr.cpp
 ./MaxsumforMinsubarr
+```
+
+To compile and run `rotate2dArr.cpp`:
+
+```sh
+g++ -o rotate2dArr rotate2dArr.cpp
+./rotate2dArr
 ```
 
 ## Input and Output Files
