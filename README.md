@@ -21,6 +21,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  [`RearrangeArrwithSign.cpp`](./RearrangeArrwithSign.cpp): Contains implementation to rearrange an array with alternating positive and negative integers while preserving order.
 -  [`setMatrixZeroes.cpp`](./setMatrixZeroes.cpp): Sets entire row and column to zero if an element in the matrix is zero.
 -  [`rotate2dArr.cpp`](./rotate2dArr.cpp): Contains the solution and driver code to read input, rotate the matrix, and write the output.
+-  [`spiralmatrix.cpp`](./spiralmatrix.cpp): Returns all elements of a matrix in spiral order.
 
 ## Overview of Each File
 
@@ -227,6 +228,10 @@ Sets entire row and column to zero if an element in the matrix is zero. The solu
 
 Contains the solution and driver code to read input, rotate the matrix, and write the output.
 
+### [spiralmatrix.cpp](./spiralmatrix.cpp)
+
+Returns all elements of a matrix in spiral order.
+
 ## How to Run
 
 1. Ensure you have a C++ compiler installed on your system.
@@ -240,42 +245,37 @@ Contains the solution and driver code to read input, rotate the matrix, and writ
    ./output
    ```
 
-## Example
+### Rotate 2D Array
 
-To compile and run `removduplicates.cpp`:
+1. Compile the program:
 
-```sh
-g++ -o removduplicates removduplicates.cpp
-./removduplicates
-```
+   ```sh
+   g++ rotate2dArr.cpp -o rotate2dArr
+   ```
 
-To compile and run `largestfreq.cpp`:
+2. Run the program:
 
-```sh
-g++ -o largestfreq largestfreq.cpp
-./largestfreq
-```
+   ```sh
+   ./rotate2dArr
+   ```
 
-To compile and run `MaxSubarr.cpp`:
+3. The output will be displayed on the console and written to `output.txt`.
 
-```sh
-g++ -o MaxSubarr MaxSubarr.cpp
-./MaxSubarr
-```
+### Spiral Matrix
 
-To compile and run `MaxsumforMinsubarr.cpp`:
+1. Compile the program:
 
-```sh
-g++ -o MaxsumforMinsubarr MaxsumforMinsubarr.cpp
-./MaxsumforMinsubarr
-```
+   ```sh
+   g++ spiralmatrix.cpp -o spiralmatrix
+   ```
 
-To compile and run `rotate2dArr.cpp`:
+2. Run the program:
 
-```sh
-g++ -o rotate2dArr rotate2dArr.cpp
-./rotate2dArr
-```
+   ```sh
+   ./spiralmatrix
+   ```
+
+3. The output will be displayed on the console.
 
 ## Input and Output Files
 
