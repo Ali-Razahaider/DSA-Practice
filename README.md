@@ -15,6 +15,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  [`2Sum.cpp`](./2Sum.cpp): Finds the indices of the two numbers in an array that add up to a given target.
 -  [`sortColor.cpp`](./sortColor.cpp): Sorts an array of colors represented by integers 0, 1, and 2 in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
 -  [`largestfreq.cpp`](./largestfreq.cpp): Contains the implementation of the `majorityElement` function and the driver code to test it.
+-  [`majorityEl2.cpp`](./majorityEl2.cpp): Finds all elements that appear more than ⌊n/3⌋ times in the array using two different algorithms.
 -  [`MaxSubarr.cpp`](./MaxSubarr.cpp): Contains the implementation of the solution and driver code.
 -  [`MaxsumforMinsubarr.cpp`](./MaxsumforMinsubarr.cpp): Contains the implementation of the solution and driver code.
 -  [`bestTimetosell.cpp`](./bestTimetosell.cpp): Contains implementation to find maximum profit that can be achieved by buying and selling stocks.
@@ -22,6 +23,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  [`setMatrixZeroes.cpp`](./setMatrixZeroes.cpp): Sets entire row and column to zero if an element in the matrix is zero.
 -  [`rotate2dArr.cpp`](./rotate2dArr.cpp): Contains the solution and driver code to read input, rotate the matrix, and write the output.
 -  [`spiralmatrix.cpp`](./spiralmatrix.cpp): Returns all elements of a matrix in spiral order.
+-  [`pascaltriangle.cpp`](./pascaltriangle.cpp): Generates Pascal's Triangle up to a specified number of rows.
 
 ## Overview of Each File
 
@@ -140,6 +142,52 @@ Contains the implementation of the `majorityElement` function and the driver cod
 2. Initialize a candidate and a counter.
 3. Iterate through the array and update the candidate and counter accordingly.
 
+### [majorityEl2.cpp](./majorityEl2.cpp)
+
+Finds all elements in an array that appear more than ⌊n/3⌋ times using two different algorithms. At most, there can be two such elements in any array.
+
+#### Approach 1: Hashmap Method
+
+1. Use an unordered map to count the occurrences of each element.
+2. Iterate through the map and add elements that appear more than ⌊n/3⌋ times to the result.
+
+Time Complexity: O(n) where n is the size of the input array.
+Space Complexity: O(n) for storing the hashmap.
+
+#### Approach 2: Boyer-Moore Voting Algorithm
+
+1. Since at most two elements can appear more than ⌊n/3⌋ times, we can extend the Boyer-Moore Voting Algorithm to track two candidates.
+2. Iterate through the array to find two potential majority elements.
+3. Verify the candidates by counting their actual occurrences.
+4. Return the elements that appear more than ⌊n/3⌋ times.
+
+Time Complexity: O(n) where n is the size of the input array.
+Space Complexity: O(1) as we only use variables to track candidates and counters.
+
+Example Input:
+
+```
+[3,2,3]
+```
+
+Expected Output:
+
+```
+[3]
+```
+
+Example Input:
+
+```
+[1,2]
+```
+
+Expected Output:
+
+```
+[1,2]
+```
+
 ### [MaxSubarr.cpp](./MaxSubarr.cpp)
 
 Contains the implementation of the solution and driver code.
@@ -231,6 +279,37 @@ Contains the solution and driver code to read input, rotate the matrix, and writ
 ### [spiralmatrix.cpp](./spiralmatrix.cpp)
 
 Returns all elements of a matrix in spiral order.
+
+### [pascaltriangle.cpp](./pascaltriangle.cpp)
+
+Generates Pascal's Triangle up to a specified number of rows. Pascal's Triangle is a triangular array where each number is the sum of the two numbers above it.
+
+#### Approach
+
+1. Create the first row with just the element 1.
+2. For each subsequent row:
+   -  Start and end the row with 1.
+   -  Calculate middle elements by summing the two elements above it from the previous row.
+
+Time Complexity: O(n²) where n is the number of rows.
+Space Complexity: O(n²) to store the triangle.
+
+The program reads the number of rows from an input file, generates Pascal's Triangle, and writes the result to an output file as well as displaying it on the console.
+
+Example Input (3 rows):
+
+```
+3
+```
+
+Expected Output:
+
+```
+Pascal's Triangle
+1
+1 1
+1 2 1
+```
 
 ## How to Run
 
