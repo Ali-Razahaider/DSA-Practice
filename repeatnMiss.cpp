@@ -28,6 +28,24 @@ class Solution {
         ans.push_back(n);
         return ans;
     }
+    vector<int> findTwoElementoptimal(vector<int>& arr) {
+        // code here
+        int missing = -1;
+        int rep = -1;
+        for(int i = 0 ; i < arr.size();i++){
+            int val = abs(arr[i]);
+            if(arr[val-1]>0){
+                arr[val-1] = -arr[val-1];
+            }else rep = val;
+        }
+        
+        for(int i = 0 ; i < arr.size();i++){
+            if(arr[i]>0){
+                missing = i+1;
+            }
+        }
+        return{rep,missing};
+    }
 };
 
 
