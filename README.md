@@ -24,6 +24,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  [`rotate2dArr.cpp`](./rotate2dArr.cpp): Contains the solution and driver code to read input, rotate the matrix, and write the output.
 -  [`spiralmatrix.cpp`](./spiralmatrix.cpp): Returns all elements of a matrix in spiral order.
 -  [`pascaltriangle.cpp`](./pascaltriangle.cpp): Generates Pascal's Triangle up to a specified number of rows.
+-  [`reversePairs.cpp`](./reversePairs.cpp): Counts the number of reverse pairs in an array using the merge sort algorithm.
 
 ## Overview of Each File
 
@@ -309,6 +310,45 @@ Pascal's Triangle
 1
 1 1
 1 2 1
+```
+
+### [reversePairs.cpp](./reversePairs.cpp)
+
+Counts the number of reverse pairs in an array. A reverse pair is a pair (i, j) where 0 <= i < j < n and nums[i] > 2 \* nums[j].
+
+#### Approach: Merge Sort
+
+1. Use a modified merge sort algorithm to count reverse pairs during the sorting process.
+2. During the merge step, count pairs that satisfy the condition before merging subarrays.
+3. The solution leverages the divide and conquer paradigm to achieve O(n log n) time complexity.
+
+Time Complexity: O(n log n) where n is the size of the input array.
+Space Complexity: O(n) for the temporary array used during merging.
+
+Example Input:
+
+```
+[1,3,2,3,1]
+```
+
+Expected Output:
+
+```
+2
+```
+
+Explanation: The reverse pairs are (1,4) and (3,4). For pair (1,4), nums[1]=3 > 2*nums[4]=2. For pair (3,4), nums[3]=3 > 2*nums[4]=2.
+
+Example Input:
+
+```
+[2,4,3,5,1]
+```
+
+Expected Output:
+
+```
+3
 ```
 
 ## How to Run
