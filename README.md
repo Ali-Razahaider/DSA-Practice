@@ -25,6 +25,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  [`spiralmatrix.cpp`](./spiralmatrix.cpp): Returns all elements of a matrix in spiral order.
 -  [`pascaltriangle.cpp`](./pascaltriangle.cpp): Generates Pascal's Triangle up to a specified number of rows.
 -  [`reversePairs.cpp`](./reversePairs.cpp): Counts the number of reverse pairs in an array using the merge sort algorithm.
+-  [`insertPos.cpp`](./insertPos.cpp): Finds the index where a target value should be inserted in a sorted array.
 
 ## Overview of Each File
 
@@ -349,6 +350,55 @@ Expected Output:
 
 ```
 3
+```
+
+### [insertPos.cpp](./insertPos.cpp)
+
+Finds the index where a target value should be inserted in a sorted array. If the target is found in the array, returns its index. If not found, returns the index where it would be inserted while maintaining the sorted order.
+
+#### Approach: Binary Search
+
+1. Use binary search to efficiently locate the position of the target or the appropriate insertion point.
+2. If the target is found, return its index.
+3. If the target is not found, the insertion point is the position where the search algorithm terminates (low index).
+
+Time Complexity: O(log n) where n is the size of the input array.
+Space Complexity: O(1) as only a constant amount of extra space is used.
+
+Example Input:
+
+```
+[1,3,5,6], target = 5
+```
+
+Expected Output:
+
+```
+2
+```
+
+Example Input:
+
+```
+[1,3,5,6], target = 2
+```
+
+Expected Output:
+
+```
+1
+```
+
+Example Input:
+
+```
+[1,3,5,6], target = 7
+```
+
+Expected Output:
+
+```
+4
 ```
 
 ## How to Run
