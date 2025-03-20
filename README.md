@@ -26,6 +26,7 @@ This repository contains solutions to various algorithm problems implemented in 
 -  [`pascaltriangle.cpp`](./pascaltriangle.cpp): Generates Pascal's Triangle up to a specified number of rows.
 -  [`reversePairs.cpp`](./reversePairs.cpp): Counts the number of reverse pairs in an array using the merge sort algorithm.
 -  [`insertPos.cpp`](./insertPos.cpp): Finds the index where a target value should be inserted in a sorted array.
+-  [`lowboundUper.cpp`](./lowboundUper.cpp): Finds the starting and ending positions of a given target value in a sorted array using binary search.
 
 ## Overview of Each File
 
@@ -399,6 +400,43 @@ Expected Output:
 
 ```
 4
+```
+
+### [lowboundUper.cpp](./lowboundUper.cpp)
+
+Finds the starting and ending positions of a given target value in a sorted array of integers. If the target value is not found, returns [-1, -1]. Uses binary search to achieve O(log n) runtime complexity.
+
+#### Approach: Binary Search
+
+1. Use a modified binary search algorithm to find the first occurrence of the target value.
+2. Use another binary search to find the last occurrence of the target value.
+3. Combine the results to get the range of the target value in the array.
+
+Time Complexity: O(log n) where n is the size of the input array.
+Space Complexity: O(1) as only a constant amount of extra space is used.
+
+Example Input:
+
+```
+[5,7,7,8,8,10], target = 8
+```
+
+Expected Output:
+
+```
+[3,4]
+```
+
+Example Input:
+
+```
+[5,7,7,8,8,10], target = 6
+```
+
+Expected Output:
+
+```
+[-1,-1]
 ```
 
 ## How to Run
