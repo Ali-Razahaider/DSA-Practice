@@ -4,6 +4,7 @@ This repository contains solutions to various algorithm problems implemented in 
 
 ## Files
 
+-  [`freqOfRepeatedElem.cpp`](./freqOfRepeatedElem.cpp): Finds the frequency of a target element in a sorted array using binary search approach.
 -  [`removduplicates.cpp`](./removduplicates.cpp): Removes duplicates from a sorted array and returns the number of unique elements.
 -  [`leftshift.cpp`](./leftshift.cpp): Rotates an array to the right by a given number of steps.
 -  [`movezeros.cpp`](./movezeros.cpp): Moves all zeros in an array to the end while maintaining the relative order of non-zero elements.
