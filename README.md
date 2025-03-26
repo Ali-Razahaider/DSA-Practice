@@ -4,6 +4,15 @@ This repository contains solutions to various algorithm problems implemented in 
 
 ## Files and Algorithms
 
+### [singleElementinSort.cpp](./singleElementinSort.cpp)
+
+**Finds the single non-duplicate element in a sorted array**
+
+-  Implements binary search to achieve O(log n) time complexity
+-  Uses the property of sorted pairs to narrow down the search space
+-  Returns the element that appears only once
+-  Includes driver code to demonstrate functionality
+
 ### [removduplicates.cpp](./removduplicates.cpp)
 
 **Removes duplicates from a sorted array**
