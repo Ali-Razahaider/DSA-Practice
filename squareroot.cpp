@@ -13,22 +13,29 @@ For example, do not use pow(x, 0.5) in c++ or x ** 0.5 in python.
 class Solution {
     public:
         int mySqrt(int n) {
+            // Handle base cases
             if (n <= 1)
                 return n;
             if (n == INT_MAX)
                 return sqrt(INT_MAX);
+                
+            // Binary search approach
+            // The square root of n is between 0 and n
             int ans = 0;
             int low = 0;
             int high = n;
 
             while (low <= high) {
+                // Calculate mid point
                 long long mid = (low + high) / 2;
-
+                
+                // If mid*mid <= n, mid could be the answer
+                // but we need to check if there's a larger value
                 if (mid * mid <= n) {
                     ans = mid;
-                    low = mid + 1;
+                    low = mid + 1;  // Look in the right half
                 } else if (mid * mid > n) {
-                    high = mid - 1;
+                    high = mid - 1;  // Look in the left half
                 }
             }
             return ans;

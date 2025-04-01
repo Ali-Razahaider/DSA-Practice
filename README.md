@@ -4,6 +4,26 @@ This repository contains solutions to various algorithm problems implemented in 
 
 ## Files and Algorithms
 
+### [KOKObanana.cpp](./KOKObanana.cpp)
+
+**Finds minimum eating speed to consume all bananas before guards return**
+
+- Uses binary search to find the optimal eating speed
+- Calculates hours needed at each potential speed using ceiling division
+- Handles constraints where hours can be less than the number of piles
+- Time complexity: O(N log M) where N is the number of piles and M is the maximum pile size
+- Space complexity: O(1)
+
+### [squareroot.cpp](./squareroot.cpp)
+
+**Calculates the integer square root without built-in functions**
+
+-  Uses binary search algorithm to efficiently find the square root
+-  Handles edge cases like 0, 1, and large integers
+-  Time complexity: O(log n)
+-  Space complexity: O(1)
+-  Includes comprehensive test cases to verify accuracy
+
 ### [singleElementinSort.cpp](./singleElementinSort.cpp)
 
 **Finds the single non-duplicate element in a sorted array**
