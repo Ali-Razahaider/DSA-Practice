@@ -4,6 +4,17 @@ This repository contains solutions to various algorithm problems implemented in 
 
 ## Files and Algorithms
 
+### [shipPackages.cpp](./shipPackages.cpp)
+
+**Finds minimum capacity to ship packages within given days**
+
+- Uses binary search to find the minimum capacity of the ship
+- Lower bound is the weight of the heaviest package
+- Upper bound is the sum of all package weights
+- Simulates shipping with different capacities to find the minimum viable one
+- Time complexity: O(N log(sum of weights)) where N is the number of packages
+- Space complexity: O(1)
+
 ### [KOKObanana.cpp](./KOKObanana.cpp)
 
 **Finds minimum eating speed to consume all bananas before guards return**
